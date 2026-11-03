@@ -87,6 +87,7 @@
     .project-card h3 { font: 700 1.22rem Manrope, sans-serif; margin-bottom: 10px; }
     .project-card p { color: var(--muted); font-size: .94rem; margin-bottom: 18px; }
     .project-card .tag-row { margin-top: auto; }
+    .project-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
     .timeline { border-left: 1px solid var(--line); margin-left: 8px; padding-left: 27px; display: grid; gap: 24px; }
     .timeline-item { position: relative; padding: 24px; border: 1px solid var(--line); border-radius: 17px; background: var(--surface); }
     .timeline-item::before { content: ""; position: absolute; left: -34px; top: 29px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent-2); box-shadow: 0 0 0 5px var(--bg); }
@@ -98,7 +99,7 @@
     .contact-panel h2 { font: 800 clamp(1.8rem, 3vw, 2.7rem)/1.15 Manrope, sans-serif; margin: 8px 0 12px; }
     .contact-panel p { color: var(--muted); max-width: 650px; }
     .contact-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
-    .contact-link { color: var(--muted); border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px; font-size: .9rem; }
+    .project-links .contact-link, .contact-link { color: var(--muted); border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px; font-size: .9rem; }
     .contact-link:hover { color: var(--text); border-color: var(--accent); }
     footer { border-top: 1px solid var(--line); padding: 24px 0; color: var(--muted); font-size: .87rem; }
     .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
@@ -137,7 +138,7 @@
   <header class="site-header">
     <nav class="nav container" aria-label="Main navigation">
       <a class="brand" href="#home">Sree Ram<span>.</span></a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">
         <i class="fa-solid fa-bars"></i>
       </button>
       <div class="nav-links" id="navLinks">
@@ -146,10 +147,7 @@
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
-        <a class="nav-cta" href="SreeRam Fullstack Developer.pdf"
-   target="_blank" rel="noopener">
-  View Resume
-</a>
+        <a class="nav-cta" href="SreeRam%20Fullstack%20Developer.pdf" target="_blank" rel="noopener">View Resume</a>
       </div>
     </nav>
   </header>
@@ -167,7 +165,7 @@
             <a class="btn btn-secondary" href="#contact">Let's Connect <i class="fa-regular fa-paper-plane"></i></a>
           </div>
           <div class="hero-meta">
-            <span><i class="fa-solid fa-code"></i> Python & Django</span>
+            <span><i class="fa-solid fa-code"></i> Python &amp; Django</span>
             <span><i class="fa-solid fa-laptop-code"></i> Full Stack Development</span>
             <span><i class="fa-solid fa-location-dot"></i> Kerala, India</span>
           </div>
@@ -214,7 +212,7 @@
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">What I work with</p>
-          <h2>Skills & technologies</h2>
+          <h2>Skills &amp; technologies</h2>
           <p>Tools and technologies I use in my learning and project development.</p>
         </div>
         <div class="skills-grid">
@@ -240,7 +238,7 @@
           </article>
           <article class="skill-card">
             <div class="skill-icon"><i class="fa-brands fa-git-alt"></i></div>
-            <h3>Tools & Workflow</h3>
+            <h3>Tools &amp; Workflow</h3>
             <p>Git, GitHub, Visual Studio Code, virtual environments, and command-line development.</p>
           </article>
           <article class="skill-card">
@@ -252,147 +250,81 @@
       </div>
     </section>
 
-    <!-- <section class="section soft-section" id="projects">
+    <section class="section soft-section" id="projects">
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Selected work</p>
           <h2>Projects I've built</h2>
-          <p>Practical applications that demonstrate my experience with Django, application workflows, and frontend development.</p>
-        </div> -->
-
-      <!-- <section class="section soft-section" id="projects">
-  <div class="container"> -->
-
-    <div class="section-head">
-      <p class="eyebrow">Selected Work</p>
-      <h2>Projects I've Built</h2>
-      <p>
-        Practical applications demonstrating my experience with Django,
-        application workflows, REST API integration, and frontend development.
-      </p>
-    </div>
-
-    <!-- Google Calendar Clone -->
-    <article class="project-card">
-      <div class="project-top">
-        <div class="project-icon">
-          <i class="fa-regular fa-calendar-days"></i>
+          <p>Practical applications demonstrating my experience with Django, application workflows, REST API integration, and frontend development.</p>
         </div>
-        <span class="status">Completed</span>
-      </div>
-
-      <h3>Google Calendar Clone</h3>
-
-      <p>
-        A responsive Google Calendar clone featuring Month, Week, Day, and
-        Agenda views. Supports event creation, editing, deletion, search,
-        and calendar filtering, with REST API integration and JWT authentication.
-      </p>
-
-      <div class="tag-row">
-        <span class="tag">HTML</span>
-        <span class="tag">Tailwind CSS</span>
-        <span class="tag">JavaScript</span>
-        <span class="tag">Python</span>
-        <span class="tag">Django REST Framework</span>
-        <span class="tag">JWT</span>
-        <span class="tag">SQLite</span>
-      </div>
-
-      <div class="contact-links">
-        <a
-          class="contact-link"
-          href="https://github.com/sreeramanadhan88-a11y/Google-Calender-Clone.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="fa-brands fa-github"></i>
-          View on GitHub
-        </a>
-      </div>
-    </article>
-
-    <!-- Stadium Arena Booking System -->
-    <article class="project-card">
-      <div class="project-top">
-        <div class="project-icon">
-          <i class="fa-solid fa-ticket"></i>
-        </div>
-        <span class="status">Completed</span>
-      </div>
-
-      <h3>Stadium Arena Booking System</h3>
-
-      <p>
-        An event booking application that allows users to browse events,
-        view stadium schedules, select seats, and manage booking workflows.
-        Built with Django REST Framework APIs and Axios for frontend-backend
-        communication, with JWT authentication.
-      </p>
-
-      <div class="tag-row">
-        <span class="tag">Python</span>
-        <span class="tag">Django REST Framework</span>
-        <span class="tag">JWT</span>
-        <span class="tag">JavaScript</span>
-        <span class="tag">Axios</span>
-        <span class="tag">Bootstrap</span>
-        <span class="tag">SQLite</span>
-      </div>
-
-      <div class="contact-links">
-        <a
-          class="contact-link"
-          href="https://github.com/sreeramanadhan88-a11y/Stadium-Booking.Html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="fa-brands fa-github"></i>
-          View on GitHub
-        </a>
-      </div>
-    </article>
-
-  </div>
-</section>
 
         <div class="project-grid">
+          <!-- Google Calendar Clone -->
+          <article class="project-card">
+            <div class="project-top">
+              <div class="project-icon"><i class="fa-regular fa-calendar-days"></i></div>
+              <span class="status">Completed</span>
+            </div>
+            <h3>Google Calendar Clone</h3>
+            <p>A responsive Google Calendar clone featuring Month, Week, Day, and Agenda views. Supports event creation, editing, deletion, search, and calendar filtering, with REST API integration and JWT authentication.</p>
+            <div class="tag-row">
+              <span class="tag">HTML</span><span class="tag">Tailwind CSS</span><span class="tag">JavaScript</span><span class="tag">Python</span><span class="tag">Django REST Framework</span><span class="tag">JWT</span><span class="tag">SQLite</span>
+            </div>
+            <div class="project-links">
+              <a class="contact-link" href="https://github.com/sreeramanadhan88-a11y/Google-Calender-Clone.html" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> View on GitHub</a>
+            </div>
+          </article>
+
+          <!-- Stadium Arena Booking System -->
+          <article class="project-card">
+            <div class="project-top">
+              <div class="project-icon"><i class="fa-solid fa-ticket"></i></div>
+              <span class="status">Completed</span>
+            </div>
+            <h3>Stadium Arena Booking System</h3>
+            <p>An event booking application that allows users to browse events, view stadium schedules, select seats, and manage booking workflows. Built with Django REST Framework APIs and Axios for frontend-backend communication, with JWT authentication.</p>
+            <div class="tag-row">
+              <span class="tag">Python</span><span class="tag">Django REST Framework</span><span class="tag">JWT</span><span class="tag">JavaScript</span><span class="tag">Axios</span><span class="tag">Bootstrap</span><span class="tag">SQLite</span>
+            </div>
+            <div class="project-links">
+              <a class="contact-link" href="https://github.com/sreeramanadhan88-a11y/Stadium-Booking.Html" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> View on GitHub</a>
+            </div>
+          </article>
+
           <article class="project-card">
             <div class="project-top"><div class="project-icon"><i class="fa-solid fa-users-gear"></i></div></div>
             <h3>Employee Management System</h3>
             <p>A role-based employee management application for handling employee records, leave requests, daily reports, announcements, and payroll-related workflows. Includes dedicated functionality for Admin, Manager, Accountant, and Staff roles.</p>
             <div class="tag-row"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">SQLite</span><span class="tag">HTML/CSS</span></div>
           </article>
+
           <article class="project-card">
             <div class="project-top"><div class="project-icon"><i class="fa-solid fa-city"></i></div></div>
             <h3>Critic Mike — Civic Issue Reporting</h3>
             <p>A civic problem reporting and tracking system. Civilians submit reports with descriptions, images, locations, and categories; administrators assign reports to departments, which update progress until resolution. Civilians can track outcomes and provide feedback.</p>
             <div class="tag-row"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">Role-based Access</span><span class="tag">SQLite</span></div>
           </article>
+
           <article class="project-card">
             <div class="project-top"><div class="project-icon"><i class="fa-solid fa-car-side"></i></div></div>
             <h3>Vehicle Rental Management System</h3>
             <p>A Django application for managing vehicle listings and rental information, with vehicle details such as brand, model, registration number, type, and rental price, supported by an administrative interface.</p>
             <div class="tag-row"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">ORM</span><span class="tag">SQLite</span></div>
           </article>
+
           <article class="project-card">
             <div class="project-top"><div class="project-icon"><i class="fa-solid fa-list-check"></i></div></div>
             <h3>To-Do Task Manager</h3>
             <p>A task management application that lets users create, update, complete, and delete tasks to organise everyday activities and keep track of work.</p>
             <div class="tag-row"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">CRUD</span><span class="tag">HTML/CSS</span></div>
           </article>
+
           <article class="project-card">
             <div class="project-top"><div class="project-icon"><i class="fa-solid fa-utensils"></i></div></div>
             <h3>Restaurant Table Booking</h3>
             <p>A browser-based table reservation application with registration, login, table booking, duplicate-booking prevention, and cancellation features.</p>
             <div class="tag-row"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">LocalStorage</span></div>
           </article>
-          <!-- <article class="project-card">
-            <div class="project-top"><div class="project-icon"><i class="fa-solid fa-graduation-cap"></i></div><span class="status">In Progress</span></div>
-            <h3>Learning Management System</h3>
-            <p>A planned full stack LMS using Django REST Framework, with role-based access for Admins, Instructors, and Students. Planned features include courses, lessons, enrollments, assignments, quizzes, grading, and progress tracking.</p>
-            <div class="tag-row"><span class="tag">Django REST Framework</span><span class="tag">REST API</span><span class="tag">JWT</span><span class="tag">Bootstrap</span></div>
-          </article> -->
         </div>
       </div>
     </section>
@@ -400,7 +332,7 @@
     <section class="section" id="experience">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Education & development</p>
+          <p class="eyebrow">Education &amp; development</p>
           <h2>My journey so far</h2>
           <p>My academic background and current professional development.</p>
         </div>
@@ -445,7 +377,7 @@
               <a class="contact-link" href="mailto:sreeramanadhan88@gmail.com"><i class="fa-regular fa-envelope"></i> Email</a>
               <a class="contact-link" href="https://github.com/sreeramanadhan88-a11y" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
               <a class="contact-link" href="https://www.linkedin.com/in/s-sree-ramanadhan-60b42340a" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-              <a class="contact-link" href="tel:6282352338"><i class="fa-solid fa-phone"></i> Phone</a>
+              <a class="contact-link" href="tel:+916282352338"><i class="fa-solid fa-phone"></i> Phone</a>
             </div>
           </div>
           <a class="btn btn-primary" href="mailto:sreeramanadhan88@gmail.com">Send an Email <i class="fa-solid fa-arrow-right"></i></a>
@@ -456,10 +388,11 @@
 
   <footer>
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Sree Ram. Built with HTML, CSS & JavaScript.</p>
+      <p>© <span id="year"></span> Sree Ram. Built with HTML, CSS &amp; JavaScript.</p>
       <a class="back-top" href="#home">Back to top ↑</a>
     </div>
   </footer>
+
   <script>
     const menuToggle = document.getElementById("menuToggle");
     const navLinks = document.getElementById("navLinks");
